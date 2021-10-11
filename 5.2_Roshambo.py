@@ -15,6 +15,7 @@ wins = 0
 losses = 0
 ties = 0
 comp = 0
+roch = "a"
 while roch != "n":
     roch = str(input("Rock (r), Paper (p) or Scissors (s), or quit "))
     comp = random.randint(1,3)
