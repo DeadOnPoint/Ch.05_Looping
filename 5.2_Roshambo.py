@@ -14,50 +14,52 @@ import random
 wins = 0
 losses = 0
 ties = 0
-quit = "n"
 comp = 0
 while quit == "n":
-    quit = str(input("Do you want to quit? (press y to quit, n to stay) "))
     if quit == "y":
         break
     elif quit == "n":
         print()
     else:
         print("INPUT THE ACTUAL ANSWER NEXT TIME JACKASS!!")
-    roch = str(input("Rock, Paper or Scisors "))
+    roch = str(input("Rock (r), Paper (p) or Scissors (s), or quit "))
     comp = random.randint(1,3)
-    if roch.lower == "rock":
+    if roch.lower == "rock" or roch.lower == "p":
         roch = 1
         if comp == 1:
-            print("Tie!")
+            print("Computer chose rock as well! It's a Tie!")
             ties = ties + 1
         elif comp == 2:
-            print("You Lost!")
+            print("Computer chose paper! You Lost!")
             losses = losses + 1
         else:
-            print("You Won!")
+            print("Computer chose scissors! You Won!")
             wins = wins = 1
-    elif roch.lower == "paper":
+    elif roch.lower == "paper" or roch.lower == "p":
         roch = 2
         if comp == 1:
-            print("You Won!")
+            print("Computer chose rock! You Won!")
             wins = wins + 1
         elif comp == 2:
-            print("Tie!")
+            print("Computer chose paper as well! It's a Tie!")
             ties = ties + 1
         else:
-            print("You Lost!")
+            print("Computer chose scissors! You Lost!")
             losses = losses + 1
-    else:
+    elif roch.lower == "scissors" or roch.lower == "s":
         roch = 3
         if comp == 1:
-            print("You Lost!")
+            print("Computer chose rock! You Lost!")
             losses = losses + 1
         elif comp == 2:
-            print("You Won!")
+            print("Computer chose paper! You Won!")
             wins = wins + 1
         else:
-            print("Tie!")
+            print("Computer chose scissors as well! It's a Tie!")
             ties = ties + 1
+    elif roch.lower == "y" or roch.lower == "yes":
+        break
+    else:
+        print("Please put in an actual choice or just quit the game dude.")
 print("You won ", wins, "times, lost ", losses, "times, and you tied the computer ", ties, "times.")
 print("Thanks for playing!")
