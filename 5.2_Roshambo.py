@@ -15,13 +15,7 @@ wins = 0
 losses = 0
 ties = 0
 comp = 0
-while quit == "n":
-    if quit == "y":
-        break
-    elif quit == "n":
-        print()
-    else:
-        print("INPUT THE ACTUAL ANSWER NEXT TIME JACKASS!!")
+while roch != "n":
     roch = str(input("Rock (r), Paper (p) or Scissors (s), or quit "))
     comp = random.randint(1,3)
     if roch.lower == "rock" or roch.lower == "p":
