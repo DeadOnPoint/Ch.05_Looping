@@ -19,7 +19,7 @@ roch = "a"
 while roch != "n":
     roch = str(input("Rock (r), Paper (p) or Scissors (s), or quit "))
     comp = random.randint(1,3)
-    if roch.lower == "rock" or roch.lower == "p":
+    if roch.lower == "rock" or roch.lower == "r":
         roch = 1
         if comp == 1:
             print("Computer chose rock as well! It's a Tie!")
