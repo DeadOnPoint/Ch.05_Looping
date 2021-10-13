@@ -5,14 +5,20 @@ The pseudo-code for how to code this game is in Chapter 5 of the Python Jedi boo
 
 '''
 import random
+import math
 
 print("Welcome to the Halo chase game!")
 print("By Will Jacobson")
 
 dist = 0 #distance traveled
-game = 0 #wether or not the game is complete
-enemies = 100 #how far away the Covenant is
+done = False #wether or not the game is complete
+enemies = -20 #how far the Covenant has gone
 com = "z" #the command that the user chose
+thirst = 0 #how thirsty you are
+tank = 20 #how much gas is in the warthog
+canteen = 6 #how many drinks are in the canteen
+rations = 3 #how many days of rations you have
+hunger = 0 #how hungry you are
 
 inst = str(input("Would you like instructions? "))
 if inst.lower() == "y" or inst.lower() == "yes":
@@ -47,4 +53,18 @@ if inst.lower() == "y" or inst.lower() == "yes":
           ''')
 else:
     pass
-while game == 0:
+while not done:
+    com = str(input("COMANDS\nA) Ahead medium speed (goes 200 miles)\nB) Ahead max speed (goes 400 miles)\nC) Refill Warthog\nD) Make camp, rest and eat and drink for the night\nE) Hunt for more provisions\nF) Status check\nG) Attempt to radio base\nH) Give up\n "))
+    if com.lower() == "h":
+        print("Good job, you decided to give up and get caught by the Covenant. We lost the war because of you.")
+        done = True
+        break
+    elif com.lower() == "f":
+        print("Miles traveled: ", dist, "\n Drinks in canteen: ", canteen, "\n Days of rations remaining: ", rations, "\n Gallons left in the tank: ", tank, "\n The Covenant is", math.fabs(dist - math.fabs(enemies)), "miles behind you.")
+    elif com.lower() == "d":
+        tank = 20
+        print("The Warthog tank is full.")
+        hunger = 0
+        print("You ate well and your hunger has been refreshed.")
+        rations = rations - 1
+        enemies = enemies + random.randint(7,14)
