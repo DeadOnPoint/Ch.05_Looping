@@ -57,7 +57,7 @@ if inst.lower() == "y" or inst.lower() == "yes": #if instructions are chosen
 else:
     pass
 while not done: #ask for commands
-    if enemies <= 100 and enemies > 0: #when the covenant is close to you
+    if math.fabs(enemies) <= 100 and math.fabs(enemies) > 0: #when the covenant is close to you
         print("The Covenant is close!")
     elif enemies <= 0:
         print("The Covenant has caught you!")
