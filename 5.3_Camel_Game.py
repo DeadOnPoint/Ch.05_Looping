@@ -99,7 +99,7 @@ while not done: #ask for commands
         done = True
         break
     elif com.lower() == "f": #status check command chosen
-        print("Miles traveled: ", dist, "\n Drinks in canteen: ", canteen, "\n Days of rations remaining: ", rations, "\n Gallons left in the tank: ", tank, "\n The Covenant is", math.fabs(dist - math.fabs(enemies)), "miles behind you.")
+        print("Miles traveled: ", dist, "\n Drinks in canteen: ", canteen, "\n Days of rations remaining: ", rations, "\n Gallons left in the tank: ", tank, "\n The Covenant is", dist - enemies, "miles behind you.")
     elif com.lower() == "d": #rest command chosen
         if rations >= 0: #weather or not you have rations
             print("You ate well and your hunger has been refreshed.")
@@ -155,4 +155,4 @@ while not done: #ask for commands
         enemies = enemies + (10 * random.randint(15, 23))
         thirst = thirst + 1
         hunger = hunger + 1
-        print("Your warthog tank has been refilled, the Covenant has gotten closer though.\nThe Covenant are", math.fabs(dist - math.fabs(enemies)), "miles away.")
+        print("Your warthog tank has been refilled, the Covenant has gotten closer though.\nThe Covenant are", dist - enemies, "miles away.")
