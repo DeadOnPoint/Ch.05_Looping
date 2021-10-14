@@ -155,3 +155,4 @@ while not done: #ask for commands
         enemies = enemies + (10 * random.randint(15, 23))
         thirst = thirst + 1
         hunger = hunger + 1
+        print("Your warthog tank has been refilled, the Covenant has gotten closer though.\nThe Covenant are", math.fabs(dist - math.fabs(enemies)), "miles away.")
