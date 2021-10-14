@@ -150,3 +150,8 @@ while not done: #ask for commands
             hunger = hunger + 1
             thirst = thirst + 1
             enemies = enemies + (10 * random.randint(15, 23))
+    elif com.lower() == "c": #refills warthog
+        tank = 20
+        enemies = enemies + (10 * random.randint(15, 23))
+        thirst = thirst + 1
+        hunger = hunger + 1
