@@ -61,7 +61,7 @@ while again.lower() == "y" or again.lower() == "yes":
     else:
         pass
     while not done: #ask for commands
-        if math.fabs(enemies) <= 100 and math.fabs(enemies) > 0: #when the covenant is close to you
+        if enemies <= 100 and enemies > 0: #when the covenant is close to you
             print("The Covenant is close!")
         elif enemies <= 0:
             print("The Covenant has caught you!")
@@ -109,7 +109,6 @@ while again.lower() == "y" or again.lower() == "yes":
                 print("You ate well and your hunger has been refreshed.")
                 rations = rations - 1
                 hunger = 0
-                enemies = enemies + (10 * random.randint(15, 23))
             else:
                 print("----------WARNING----------\nYou are out of provisions! Hunt to survive!")
                 hunger = hunger + 1
@@ -117,10 +116,11 @@ while again.lower() == "y" or again.lower() == "yes":
                 print("You drank one drink out of your canteen and your thirst has been refreshed")
                 canteen = canteen - 1
                 thirst = 0
-                enemies = enemies + (10 * random.randint(15, 23))
             else:
                 print("----------WARNING----------\nYou are out of water! Look for an oasis.")
                 thirst = thirst + 1
+            if rations >= 0 and canteen >= 0:
+                enemies = enemies + (10 * random.randint(15, 23))
         elif com.lower() == "a": #warthog moves at medium speed
             print("You and your Warthog are moving at a decent pace across the desert sands.")
             dist = dist + 200
