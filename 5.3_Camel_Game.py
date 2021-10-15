@@ -31,9 +31,9 @@ while again.lower() == "y" or again.lower() == "yes":
     if inst.lower() == "y" or inst.lower() == "yes": #if instructions are chosen
         print('''
           Welcome to Halo chase, you are an ONI ODST who needs to travel 2000 miles back to base through the desert 
-          with vital inteligence for the war.
+          with vital intelligence for the war.
           However, you were discovered by the Covenant and a hoard of Elites and Grunts are chasing you.
-          Your decisions will decide wether or not you will be caught.
+          Your decisions will decide whether or not you will be caught.
           You are riding a Warthog with ample fuel, but seeing as you are alone, it will take a full day for you to
           refuel.
           You also have a canteen that will last only 6 drinks, so ration yourself accordingly.
