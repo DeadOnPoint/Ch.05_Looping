@@ -61,9 +61,9 @@ while again.lower() == "y" or again.lower() == "yes":
     else:
         pass
     while not done: #ask for commands
-        if enemies <= 100 and enemies > 0: #when the covenant is close to you
+        if dist - enemies <= 100 and dist - enemies > 0: #when the covenant is close to you
             print("The Covenant is close!")
-        elif enemies <= 0:
+        elif dist - enemies <= 0:
             print("The Covenant has caught you!")
             done = True
             break
