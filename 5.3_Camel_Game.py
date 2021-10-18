@@ -99,7 +99,7 @@ while again.lower() == "y" or again.lower() == "yes":
             thirst = 0
         com = str(input("COMANDS\nA) Ahead medium speed (goes 200 miles)\nB) Ahead max speed (goes 300 miles)\nC) Refill Warthog\nD) Make camp, rest and eat and drink for the night\nE) Hunt for more provisions\nF) Status check\nG) Attempt to radio base\nH) Give up\n "))
         if com.lower() == "h": #give up/quit command chosen
-            print("Good job, you decided to give up and get caught by the Covenant. We lost the war because of you.")
+            print("Good job, you decided to give up and fight against the Covenant.\nYou lost horribly and were riddled with plasma blasts. We lost the war because of you.")
             done = True
             break
         elif com.lower() == "f": #status check command chosen
