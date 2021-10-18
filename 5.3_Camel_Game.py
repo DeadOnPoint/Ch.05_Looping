@@ -165,6 +165,6 @@ while again.lower() == "y" or again.lower() == "yes":
         if again.lower() == "y" or again.lower() == "yes":
             pass
         else:
-            print("Fine then.")
+            print("\nFine then.")
             print("I didn't want to play again either.")
             break
