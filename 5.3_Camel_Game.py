@@ -69,17 +69,17 @@ while again.lower() == "y" or again.lower() == "yes":
             break
         else:
             pass
-        if thirst >= 4 and thirst < 6: #when you are starting to get thirsty
+        if thirst >= 2 and thirst < 4: #when you are starting to get thirsty
             print("You are thirsty, take a break soon and stop to drink, eat and rest.")
-        elif thirst >= 6: #when you die of thirst
+        elif thirst >= 4: #when you die of thirst
             print("You died of thirst!")
             done = True
             break
-        elif hunger >= 6: #when you die of hunger
+        elif hunger >= 4: #when you die of hunger
             print("You died of hunger!")
             done = True
             break
-        elif hunger >= 4 and hunger < 6: #when you are starting to get hungry
+        elif hunger >= 2 and hunger < 4: #when you are starting to get hungry
             print("You are hungry, take a break soon to stop to eat, drink, and rest.")
         elif tank <= 10 and tank >0: #when your gas tank is running low
             print("You are running low on gas!")
